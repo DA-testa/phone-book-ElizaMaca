@@ -41,6 +41,9 @@ def process_queries(queries):
             number=int(query[1])
             name=query[2]
             hashTable.addContact(number,name)
+        elif cur_query=='del':
+            number=int(query[1])
+            hashTable.delContact(number)
         else:
             number=int(query[1])
             response=hashTable.findContact(number)
